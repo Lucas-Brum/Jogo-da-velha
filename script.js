@@ -248,6 +248,11 @@ function carregar ()
         {
             for(var j = 0; j<=2; j++)
             {
+               if(vez>=8 && (player1<3 || player2<3))
+                  {
+                    win=1
+                    player.innerHTML = " Empate"
+                  }
                if( okay[i][j] == "player2")
                 {
                     player2 ++
