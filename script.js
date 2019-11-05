@@ -303,31 +303,14 @@ function carregar ()
                     player2 = 0
                 }   
         }
-//empate ainda esta sendo feito
-        /*if(vez>=8 && (player1<3 || player2<3))
+            //empate 
+        if(vez>=8 && (player1<3 || player2<3))
                   {
                     win=1
                     player.innerHTML = " Empate"
-                  }*/ 
+                  } 
 
 
     }
 }
-/*denovo()
-    {
-         img = [window.document.getElementById('img00'),window.document.getElementById('img01'),window.document.getElementById('img02'),window.document.getElementById('img10'), window.document.getElementById('img11'),window.document.getElementById('img12'), window.document.getElementById('img20'),window.document.getElementById('img21'),window.document.getElementById('img22')]
-         okay =  
-                    [
-                        ["00","01","02"],
-                        ["10","11","12"],
-                        ["20","21","22"]
-                    ]
-        valores= ''
-        player1 = 0
-        player2 = 0
-        win = 0   
-        for(var i = 0; i<= 8; i++)
-        {
-                img[i].src = 'Img/Branco.png'  
-        }
-    }*/
+
