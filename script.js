@@ -1,6 +1,7 @@
 function carregar ()
 {
-    var img = [window.document.getElementById('img00'),window.document.getElementById('img01'),window.document.getElementById('img02'),window.document.getElementById('img10'), window.document.getElementById('img11'),window.document.getElementById('img12'), window.document.getElementById('img20'),window.document.getElementById('img21'),window.document.getElementById('img22')]
+    var img = [window.document.getElementById('img00'),
+               window.document.getElementById('img01'),window.document.getElementById('img02'),window.document.getElementById('img10'), window.document.getElementById('img11'),window.document.getElementById('img12'), window.document.getElementById('img20'),window.document.getElementById('img21'),window.document.getElementById('img22')]
     var okay =  
                 [
                     ["00","01","02"],
@@ -303,8 +304,8 @@ function carregar ()
                     player2 = 0
                 }   
         }
-            //empate 
-        if(vez>=8 && (player1<3 || player2<3))
+                                                                                   //Determina se é empate
+        if(vez>=9 && (player1<3 || player2<3))
                   {
                     win=1
                     player.innerHTML = " Empate"
