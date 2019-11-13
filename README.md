@@ -12,7 +12,6 @@ Dentro da paste deve dispor os arquivos:<br/>
 e criar outra pasta chamada Img(com o I maiusculo mesmo) e colocar as imagens la dentro assim:<br/>
 - Xis.png<br/>
 - Circulo.png<br/>
-<img src="https://drive.google.com/file/d/1-DEw5OAJhpNo1RBAoq7mta96CO1689vW/view" alt="Branco" height="42" width="42">
 - Branco.png<br/>
 -------------xxxxxxxxxxxxx----------<br/>
 Vitoria Player 1:<br/>
