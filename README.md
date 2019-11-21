@@ -7,7 +7,7 @@ Dentro da paste deve dispor os arquivos:</p><br/>
 -index.html<br/>
 -script.js<br/>
 --------------xxxxxxxxxxxxx---------<br/>
-<p>E apois isso criar outra pasta chamada Img(com o I maiusculo mesmo) dentro da pasta aonde estão os arquivos index e script e colocar as imagens la dentro assim:</p><br/>
+<p>E apos isso criar outra pasta chamada Img(com o I maiusculo mesmo) dentro da pasta aonde estão os arquivos index e script e colocar as imagens la dentro assim:</p><br/>
 - Xis.png<br/>
 - Circulo.png<br/>
 - Branco.png<br/>
