@@ -1,26 +1,30 @@
 function carregar ()
 {   // linka elementos html ao JS
-    var img = [window.document.getElementById('img00'),
-               window.document.getElementById('img01'),
-               window.document.getElementById('img02'),
-               window.document.getElementById('img10'),
-               window.document.getElementById('img11'),
-               window.document.getElementById('img12'), 
-               window.document.getElementById('img20'),
-               window.document.getElementById('img21'),
-               window.document.getElementById('img22')]
-    var placar =  // variaveis de referencia
+    var img = [window.document.getElementById('img00branco'),
+               window.document.getElementById('img01branco'),
+               window.document.getElementById('img02branco'),
+               window.document.getElementById('img10branco'),
+               window.document.getElementById('img11branco'),
+               window.document.getElementById('img12branco'), 
+               window.document.getElementById('img20branco'),
+               window.document.getElementById('img21branco'),
+               window.document.getElementById('img22branco')]
+    //link botão de reset
+    var reset = window.document.getElementById('reset')
+    // variaveis de referencia
+    var placar =  
                 [
                     ["00","01","02"],
                     ["10","11","12"],
                     ["20","21","22"]
                 ]
     var valores= ''
-    var p1 = prompt('nome do player 1')
-    var p2 = prompt('nome do player 2')
+    var p1 = prompt('Nome do player 1:')
+    var p2 = prompt('Nome do player 2:')
     var player1 = 0
     var player2 = 0
     var win = 0
+    var vez = 0 
     // escutam os elementos do html
     img[0].addEventListener('click', clicar00)
     img[1].addEventListener('click', clicar01)
@@ -31,24 +35,31 @@ function carregar ()
     img[6].addEventListener('click', clicar20)
     img[7].addEventListener('click', clicar21)
     img[8].addEventListener('click', clicar22)
+    reset.addEventListener('click', reinicia)
     
-    vez = 0 
+   
 
     // Funções de seleção de player
     function clicar00()
     {   if(placar[0][0]==="00"&& win ==0)
         {
-            if (vez % 2 == 0) // se for a vez do player 2
+            if (vez % 2 == 0) // se for a vez do player 1
             {
                 vez = vez+1
-                img[0].src = 'Img/Xis.png'
+                img[0].classList.add('d-none')
+                window.document.getElementById('img00xis').classList.remove('d-none')
+                window.document.getElementById('img00branco').classList.remove('d-block')
+                window.document.getElementById('img00xis').classList.add('d-block')
                 player.innerHTML = "Vez de "+p2
                 placar[0][0]="player1"
             }
-            else // se for a vez do player 1
+            else // se for a vez do player 2
             {
                 vez = vez+1
-                img[0].src = 'Img/Circulo.png'
+                img[0].classList.add('d-none')
+                window.document.getElementById('img00circulo').classList.remove('d-none')
+                window.document.getElementById('img00branco').classList.remove('d-block')
+                window.document.getElementById('img00circulo').classList.add('d-block')
                 player.innerHTML = "Vez de "+p1
                 placar[0][0]="player2"
             }
@@ -62,14 +73,20 @@ function carregar ()
             if (vez % 2 == 0) 
             {
                 vez = vez+1
-                img[1].src = 'Img/Xis.png'
+                img[1].classList.add('d-none')
+                window.document.getElementById('img01xis').classList.remove('d-none')
+                window.document.getElementById('img01branco').classList.remove('d-block')
+                window.document.getElementById('img01xis').classList.add('d-block')
                 player.innerHTML = "Vez de "+p2
                 placar[0][1]="player1"
             }
             else   
             {
                 vez = vez+1
-                img[1].src = 'Img/Circulo.png'
+                img[1].classList.add('d-none')
+                window.document.getElementById('img01circulo').classList.remove('d-none')
+                window.document.getElementById('img01branco').classList.remove('d-block')
+                window.document.getElementById('img01circulo').classList.add('d-block')
                 player.innerHTML = "Vez de "+p1
                 placar[0][1]="player2"
             }
@@ -84,14 +101,20 @@ function carregar ()
             if (vez % 2 == 0) 
             {
                 vez = vez+1 
-                img[2].src = 'Img/Xis.png'
+                img[2].classList.add('d-none')
+                window.document.getElementById('img02xis').classList.remove('d-none')
+                window.document.getElementById('img02branco').classList.remove('d-block')
+                window.document.getElementById('img02xis').classList.add('d-block')
                 player.innerHTML =  "Vez de "+p2
                 placar[0][2]="player1"
             }
             else  
             {
                 vez = vez+1
-                img[2].src = 'Img/Circulo.png'
+                img[2].classList.add('d-none')
+                window.document.getElementById('img02circulo').classList.remove('d-none')
+                window.document.getElementById('img02branco').classList.remove('d-block')
+                window.document.getElementById('img02circulo').classList.add('d-block')
                 player.innerHTML =  "Vez de "+p1
                 placar[0][2]="player2"
             }
@@ -105,14 +128,20 @@ function carregar ()
             if (vez % 2 == 0)
             {
                 vez = vez+1
-                img[3].src = 'Img/Xis.png'
+                img[3].classList.add('d-none')
+                window.document.getElementById('img10xis').classList.remove('d-none')
+                window.document.getElementById('img10branco').classList.remove('d-block')
+                window.document.getElementById('img10xis').classList.add('d-block')
                 player.innerHTML =  "Vez de "+p2
                 placar[1][0]="player1"
             }
             else
             {
                 vez = vez+1
-                img[3].src = 'Img/Circulo.png'
+                img[3].classList.add('d-none')
+                window.document.getElementById('img10circulo').classList.remove('d-none')
+                window.document.getElementById('img10branco').classList.remove('d-block')
+                window.document.getElementById('img10circulo').classList.add('d-block')
                 player.innerHTML =  "Vez de "+p1
                 placar[1][0]="player2"
             }
@@ -126,14 +155,20 @@ function carregar ()
             if (vez % 2 == 0)
             {
                 vez = vez+1
-                img[4].src = 'Img/Xis.png'
+                img[4].classList.add('d-none')
+                window.document.getElementById('img11xis').classList.remove('d-none')
+                window.document.getElementById('img11branco').classList.remove('d-block')
+                window.document.getElementById('img11xis').classList.add('d-block')
                 player.innerHTML =  "Vez de "+p2
                 placar[1][1]="player1"
             }
             else
             {
                 vez = vez+1
-                img[4].src = 'Img/Circulo.png'
+                img[4].classList.add('d-none')
+                window.document.getElementById('img11circulo').classList.remove('d-none')
+                window.document.getElementById('img11branco').classList.remove('d-block')
+                window.document.getElementById('img11circulo').classList.add('d-block')
                 player.innerHTML =  "Vez de "+p1
                 placar[1][1]="player2"
             }
@@ -147,14 +182,20 @@ function carregar ()
             if (vez % 2 == 0)
             {
                 vez = vez+1
-                img[5].src = 'Img/Xis.png'
+                img[5].classList.add('d-none')
+                window.document.getElementById('img12xis').classList.remove('d-none')
+                window.document.getElementById('img12branco').classList.remove('d-block')
+                window.document.getElementById('img12xis').classList.add('d-block')
                 player.innerHTML =  "Vez de "+p2
                 placar[1][2]="player1"
             }
             else
             {
                 vez = vez+1
-                img[5].src = 'Img/Circulo.png'
+                img[5].classList.add('d-none')
+                window.document.getElementById('img12circulo').classList.remove('d-none')
+                window.document.getElementById('img12branco').classList.remove('d-block')
+                window.document.getElementById('img12circulo').classList.add('d-block')
                 player.innerHTML =  "Vez de "+p1
                 placar[1][2]="player2"
             }
@@ -168,14 +209,20 @@ function carregar ()
             if (vez % 2 == 0)
             {
                 vez = vez+1
-                img[6].src = 'Img/Xis.png'
+                img[6].classList.add('d-none')
+                window.document.getElementById('img20xis').classList.remove('d-none')
+                window.document.getElementById('img20branco').classList.remove('d-block')
+                window.document.getElementById('img20xis').classList.add('d-block')
                 player.innerHTML =  "Vez de "+p2
                 placar[2][0]="player1"
             }
             else
             {
                 vez = vez+1
-                img[6].src = 'Img/Circulo.png'
+                img[6].classList.add('d-none')
+                window.document.getElementById('img20circulo').classList.remove('d-none')
+                window.document.getElementById('img20branco').classList.remove('d-block')
+                window.document.getElementById('img20circulo').classList.add('d-block')
                 player.innerHTML =  "Vez de "+p1
                 placar[2][0]="player2"
             }
@@ -189,14 +236,20 @@ function carregar ()
             if (vez % 2 == 0)
             {
                 vez = vez+1
-                img[7].src = 'Img/Xis.png'
+                img[7].classList.add('d-none')
+                window.document.getElementById('img21xis').classList.remove('d-none')
+                window.document.getElementById('img21branco').classList.remove('d-block')
+                window.document.getElementById('img21xis').classList.add('d-block')
                 player.innerHTML = "Vez de "+p2
                 placar[2][1]="player1"
             }
             else
             {
                 vez = vez+1
-                img[7].src = 'Img/Circulo.png'
+                img[7].classList.add('d-none')
+                window.document.getElementById('img21circulo').classList.remove('d-none')
+                window.document.getElementById('img21branco').classList.remove('d-block')
+                window.document.getElementById('img21circulo').classList.add('d-block')
                 player.innerHTML = "Vez de "+p1
                 placar[2][1]="player2"
             }
@@ -210,14 +263,20 @@ function carregar ()
             if (vez % 2 == 0)
             {
                 vez = vez+1
-                img[8].src = 'Img/Xis.png'
+                img[8].classList.add('d-none')
+                window.document.getElementById('img22xis').classList.remove('d-none')
+                window.document.getElementById('img22branco').classList.remove('d-block')
+                window.document.getElementById('img22xis').classList.add('d-block')
                 player.innerHTML = "Vez de "+p2
                 placar[2][2]="player1"
             }
             else
             {
                 vez = vez+1
-                img[8].src = 'Img/Circulo.png'
+                img[8].classList.add('d-none')
+                window.document.getElementById('img22circulo').classList.remove('d-none')
+                window.document.getElementById('img22branco').classList.remove('d-block')
+                window.document.getElementById('img22circulo').classList.add('d-block')
                 player.innerHTML = "Vez de "+p1
                 placar[2][2]= "player2"
             }
@@ -319,6 +378,90 @@ function carregar ()
                 }   
             }
 
+    }
+    // funções extragame
+    function reinicia()
+    {
+        //reseta as statisticas da partida
+
+        placar =  
+                    [
+                        ["00","01","02"],
+                        ["10","11","12"],
+                        ["20","21","22"]
+                    ]
+        valores= ''
+        player1 = 0
+        player2 = 0
+        win = 0
+        vez = 0 
+
+
+        // reinicia o layout do jogo
+
+        // Mostrando e alinhando os brancos           
+        img[0].classList.remove('d-none')
+        img[1].classList.remove('d-none')
+        img[2].classList.remove('d-none')
+        img[3].classList.remove('d-none')
+        img[4].classList.remove('d-none')
+        img[5].classList.remove('d-none')
+        img[6].classList.remove('d-none')
+        img[7].classList.remove('d-none')
+        img[8].classList.remove('d-none')
+
+        img[0].classList.add('d-block')
+        img[1].classList.add('d-block')
+        img[2].classList.add('d-block')
+        img[3].classList.add('d-block')
+        img[4].classList.add('d-block')
+        img[5].classList.add('d-block')
+        img[6].classList.add('d-block')
+        img[7].classList.add('d-block')
+        img[8].classList.add('d-block')
+
+        // apagando e desalinhando os Xis
+
+        window.document.getElementById('img00xis').classList.add('d-none')
+        window.document.getElementById('img01xis').classList.add('d-none')
+        window.document.getElementById('img02xis').classList.add('d-none')
+        window.document.getElementById('img10xis').classList.add('d-none')
+        window.document.getElementById('img11xis').classList.add('d-none')
+        window.document.getElementById('img12xis').classList.add('d-none')
+        window.document.getElementById('img20xis').classList.add('d-none')
+        window.document.getElementById('img21xis').classList.add('d-none')
+        window.document.getElementById('img22xis').classList.add('d-none')
+
+        window.document.getElementById('img00xis').classList.remove('d-block')
+        window.document.getElementById('img01xis').classList.remove('d-block')
+        window.document.getElementById('img02xis').classList.remove('d-block')
+        window.document.getElementById('img10xis').classList.remove('d-block')
+        window.document.getElementById('img11xis').classList.remove('d-block')
+        window.document.getElementById('img12xis').classList.remove('d-block')
+        window.document.getElementById('img20xis').classList.remove('d-block')
+        window.document.getElementById('img21xis').classList.remove('d-block')
+        window.document.getElementById('img22xis').classList.remove('d-block')
+
+        //apagando e desalinhando os Circulos
+
+        window.document.getElementById('img00circulo').classList.add('d-none')
+        window.document.getElementById('img01circulo').classList.add('d-none')
+        window.document.getElementById('img02circulo').classList.add('d-none')
+        window.document.getElementById('img10circulo').classList.add('d-none')
+        window.document.getElementById('img11circulo').classList.add('d-none')
+        window.document.getElementById('img12circulo').classList.add('d-none')
+        window.document.getElementById('img20circulo').classList.add('d-none')
+        window.document.getElementById('img21circulo').classList.add('d-none')
+        window.document.getElementById('img22circulo').classList.add('d-none')
+        window.document.getElementById('img00circulo').classList.remove('d-block')
+        window.document.getElementById('img01circulo').classList.remove('d-block')
+        window.document.getElementById('img02circulo').classList.remove('d-block')
+        window.document.getElementById('img10circulo').classList.remove('d-block')
+        window.document.getElementById('img11circulo').classList.remove('d-block')
+        window.document.getElementById('img12circulo').classList.remove('d-block')
+        window.document.getElementById('img20circulo').classList.remove('d-block')
+        window.document.getElementById('img21circulo').classList.remove('d-block')
+        window.document.getElementById('img22circulo').classList.remove('d-block')
     }
 }
 
