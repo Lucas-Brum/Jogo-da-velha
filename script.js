@@ -36,6 +36,9 @@ function carregar ()
     img[7].addEventListener('click', clicar21)
     img[8].addEventListener('click', clicar22)
     reset.addEventListener('click', reinicia)
+   // Coloda nome do player iniciante na tela
+   player.innerHTML = "Vez de "+p1
+    
     
    
 
@@ -398,6 +401,10 @@ function carregar ()
 
 
         // reinicia o layout do jogo
+        
+        // reinicia nome do player
+        player.innerHTML = "Vez de "+p1
+
 
         // Mostrando e alinhando os brancos           
         img[0].classList.remove('d-none')
