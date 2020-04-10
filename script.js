@@ -372,30 +372,31 @@ function carregar ()
         for(let j = 0; j <= 2; j++){
             for(let i = 0; i <= 2; i++){
                 if(i==j){
+
                     if (Matriz[i][j] == 'player1' && player1 < 3){
                     player1++
                     }
+                    
                     if (Matriz[i][j] == 'player2' && player2 < 3){
                     player2++                        
-                } 
-                    
+                    }   
                 }
             }
         }
         if(player1 == 3){
-                player.innerHTML = p1 +" win!"
-                win = 1
-            }
-            else{
-               player1 = 0
-            }
-            if(player2 == 3){
-                player.innerHTML = p2 +" win!"
-                win = 1
-            }
-            else{
-                player2 = 0
-            }
+            player.innerHTML = p1 +" win!"
+            win = 1
+        }
+        else{
+            player1 = 0
+        }
+        if(player2 == 3){
+            player.innerHTML = p2 +" win!"
+            win = 1
+        }
+        else{
+            player2 = 0
+        }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -453,26 +454,11 @@ function carregar ()
         player.innerHTML = "Vez de "+p1 
 
             // Mostrando e alinhando os brancos           
-
-        img[0].classList.remove('d-none')
-        img[1].classList.remove('d-none')
-        img[2].classList.remove('d-none')
-        img[3].classList.remove('d-none')
-        img[4].classList.remove('d-none')
-        img[5].classList.remove('d-none')
-        img[6].classList.remove('d-none')
-        img[7].classList.remove('d-none')
-        img[8].classList.remove('d-none')
-
-        img[0].classList.add('d-block')
-        img[1].classList.add('d-block')
-        img[2].classList.add('d-block')
-        img[3].classList.add('d-block')
-        img[4].classList.add('d-block')
-        img[5].classList.add('d-block')
-        img[6].classList.add('d-block')
-        img[7].classList.add('d-block')
-        img[8].classList.add('d-block')
+        for(let i = 0; i<=8; i++){
+            img[i].classList.remove('d-none')
+            img[i].classList.add('d-block')
+        }
+        
 
         // apagando e desalinhando os Xis
 
