@@ -51,7 +51,7 @@ function carregar ()
     img[8].addEventListener('click', clicar22)
     reset.addEventListener('click', reinicia)
    // Coloda nome do player iniciante na tela
-   player.innerHTML = "Vez de "+p1 
+   mostraQuemJoga() 
     
     
    
@@ -62,22 +62,22 @@ function carregar ()
         {
             if (vez % 2 == 0) // se for a vez do player 1
             {
-                vez = vez+1
+                torcaTurno()
                 img[0].classList.add('d-none')
                 window.document.getElementById('img00xis').classList.remove('d-none')
                 window.document.getElementById('img00branco').classList.remove('d-block')
                 window.document.getElementById('img00xis').classList.add('d-block')
-                player.innerHTML = "Vez de "+p2 
+                mostraQuemJoga()
                 Matriz[0][0]="player1"
             }
             else // se for a vez do player 2
             {
-                vez = vez+1
+                torcaTurno()
                 img[0].classList.add('d-none')
                 window.document.getElementById('img00circulo').classList.remove('d-none')
                 window.document.getElementById('img00branco').classList.remove('d-block')
                 window.document.getElementById('img00circulo').classList.add('d-block')
-                player.innerHTML = "Vez de "+p1 
+                mostraQuemJoga() 
                 Matriz[0][0]="player2"
             }
         }
@@ -89,22 +89,22 @@ function carregar ()
         {
             if (vez % 2 == 0) 
             {
-                vez = vez+1
+                torcaTurno()
                 img[1].classList.add('d-none')
                 window.document.getElementById('img01xis').classList.remove('d-none')
                 window.document.getElementById('img01branco').classList.remove('d-block')
                 window.document.getElementById('img01xis').classList.add('d-block')
-                player.innerHTML = "Vez de "+p2 
+                mostraQuemJoga() 
                 Matriz[0][1]="player1"
             }
             else   
             {
-                vez = vez+1
+                torcaTurno()
                 img[1].classList.add('d-none')
                 window.document.getElementById('img01circulo').classList.remove('d-none')
                 window.document.getElementById('img01branco').classList.remove('d-block')
                 window.document.getElementById('img01circulo').classList.add('d-block')
-                player.innerHTML = "Vez de "+p1 
+                mostraQuemJoga() 
                 Matriz[0][1]="player2"
             }
         }
@@ -117,22 +117,22 @@ function carregar ()
         {
             if (vez % 2 == 0) 
             {
-                vez = vez+1 
+                torcaTurno() 
                 img[2].classList.add('d-none')
                 window.document.getElementById('img02xis').classList.remove('d-none')
                 window.document.getElementById('img02branco').classList.remove('d-block')
                 window.document.getElementById('img02xis').classList.add('d-block')
-                player.innerHTML =  "Vez de "+p2 
+                mostraQuemJoga() 
                 Matriz[0][2]="player1"
             }
             else  
             {
-                vez = vez+1
+                torcaTurno()
                 img[2].classList.add('d-none')
                 window.document.getElementById('img02circulo').classList.remove('d-none')
                 window.document.getElementById('img02branco').classList.remove('d-block')
                 window.document.getElementById('img02circulo').classList.add('d-block')
-                player.innerHTML =  "Vez de "+p1 
+                mostraQuemJoga() 
                 Matriz[0][2]="player2"
             }
         }
@@ -144,22 +144,22 @@ function carregar ()
         {
             if (vez % 2 == 0)
             {
-                vez = vez+1
+                torcaTurno()
                 img[3].classList.add('d-none')
                 window.document.getElementById('img10xis').classList.remove('d-none')
                 window.document.getElementById('img10branco').classList.remove('d-block')
                 window.document.getElementById('img10xis').classList.add('d-block')
-                player.innerHTML =  "Vez de "+p2 
+                mostraQuemJoga() 
                 Matriz[1][0]="player1"
             }
             else
             {
-                vez = vez+1
+                torcaTurno()
                 img[3].classList.add('d-none')
                 window.document.getElementById('img10circulo').classList.remove('d-none')
                 window.document.getElementById('img10branco').classList.remove('d-block')
                 window.document.getElementById('img10circulo').classList.add('d-block')
-                player.innerHTML =  "Vez de "+p1 
+                mostraQuemJoga() 
                 Matriz[1][0]="player2"
             }
         }
@@ -171,22 +171,22 @@ function carregar ()
         {
             if (vez % 2 == 0)
             {
-                vez = vez+1
+                torcaTurno()
                 img[4].classList.add('d-none')
                 window.document.getElementById('img11xis').classList.remove('d-none')
                 window.document.getElementById('img11branco').classList.remove('d-block')
                 window.document.getElementById('img11xis').classList.add('d-block')
-                player.innerHTML =  "Vez de "+p2 
+                mostraQuemJoga() 
                 Matriz[1][1]="player1"
             }
             else
             {
-                vez = vez+1
+                torcaTurno()
                 img[4].classList.add('d-none')
                 window.document.getElementById('img11circulo').classList.remove('d-none')
                 window.document.getElementById('img11branco').classList.remove('d-block')
                 window.document.getElementById('img11circulo').classList.add('d-block')
-                player.innerHTML =  "Vez de "+p1 
+                mostraQuemJoga() 
                 Matriz[1][1]="player2"
             }
         }
@@ -198,22 +198,22 @@ function carregar ()
         {
             if (vez % 2 == 0)
             {
-                vez = vez+1
+                torcaTurno()
                 img[5].classList.add('d-none')
                 window.document.getElementById('img12xis').classList.remove('d-none')
                 window.document.getElementById('img12branco').classList.remove('d-block')
                 window.document.getElementById('img12xis').classList.add('d-block')
-                player.innerHTML =  "Vez de "+p2 
+                mostraQuemJoga() 
                 Matriz[1][2]="player1"
             }
             else
             {
-                vez = vez+1
+                torcaTurno()
                 img[5].classList.add('d-none')
                 window.document.getElementById('img12circulo').classList.remove('d-none')
                 window.document.getElementById('img12branco').classList.remove('d-block')
                 window.document.getElementById('img12circulo').classList.add('d-block')
-                player.innerHTML =  "Vez de "+p1 
+                mostraQuemJoga() 
                 Matriz[1][2]="player2"
             }
         }
@@ -225,22 +225,22 @@ function carregar ()
         {
             if (vez % 2 == 0)
             {
-                vez = vez+1
+                torcaTurno()
                 img[6].classList.add('d-none')
                 window.document.getElementById('img20xis').classList.remove('d-none')
                 window.document.getElementById('img20branco').classList.remove('d-block')
                 window.document.getElementById('img20xis').classList.add('d-block')
-                player.innerHTML =  "Vez de "+p2 
+                mostraQuemJoga() 
                 Matriz[2][0]="player1"
             }
             else
             {
-                vez = vez+1
+                torcaTurno()
                 img[6].classList.add('d-none')
                 window.document.getElementById('img20circulo').classList.remove('d-none')
                 window.document.getElementById('img20branco').classList.remove('d-block')
                 window.document.getElementById('img20circulo').classList.add('d-block')
-                player.innerHTML =  "Vez de "+p1 
+                mostraQuemJoga()
                 Matriz[2][0]="player2"
             }
         }
@@ -252,22 +252,22 @@ function carregar ()
         {
             if (vez % 2 == 0)
             {
-                vez = vez+1
+                torcaTurno()
                 img[7].classList.add('d-none')
                 window.document.getElementById('img21xis').classList.remove('d-none')
                 window.document.getElementById('img21branco').classList.remove('d-block')
                 window.document.getElementById('img21xis').classList.add('d-block')
-                player.innerHTML = "Vez de "+p2 
+                mostraQuemJoga()
                 Matriz[2][1]="player1"
             }
             else
             {
-                vez = vez+1
+                torcaTurno()
                 img[7].classList.add('d-none')
                 window.document.getElementById('img21circulo').classList.remove('d-none')
                 window.document.getElementById('img21branco').classList.remove('d-block')
                 window.document.getElementById('img21circulo').classList.add('d-block')
-                player.innerHTML = "Vez de "+p1 
+                mostraQuemJoga() 
                 Matriz[2][1]="player2"
             }
         }
@@ -279,27 +279,56 @@ function carregar ()
         {
             if (vez % 2 == 0)
             {
-                vez = vez+1
+                torcaTurno()
                 img[8].classList.add('d-none')
                 window.document.getElementById('img22xis').classList.remove('d-none')
                 window.document.getElementById('img22branco').classList.remove('d-block')
                 window.document.getElementById('img22xis').classList.add('d-block')
-                player.innerHTML = "Vez de "+p2 
+                mostraQuemJoga() 
                 Matriz[2][2]="player1"
             }
             else
             {
-                vez = vez+1
+                torcaTurno()
                 img[8].classList.add('d-none')
                 window.document.getElementById('img22circulo').classList.remove('d-none')
                 window.document.getElementById('img22branco').classList.remove('d-block')
                 window.document.getElementById('img22circulo').classList.add('d-block')
-                player.innerHTML = "Vez de "+p1 
+                mostraQuemJoga() 
                 Matriz[2][2]= "player2"
             }
         }
         vitoria()
     }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    //FUNÇÃO QUE MONITORA OS TURNOS DO GAME
+
+    function torcaTurno(){
+        vez = vez+1
+        if (vez % 2 == 0 ){
+        window.document.getElementById('Corpo').style.backgroundColor = 'red';
+        }
+        else{
+        window.document.getElementById('Corpo').style.backgroundColor = 'blue';
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Função responsvel pro trocar as letras do painel de nome
+
+    function mostraQuemJoga(){
+        if (vez % 2 == 0 ){
+            player.innerHTML = "Vez de "+p2
+        }
+        else{
+            player.innerHTML = "Vez de "+p1
+        }
+    }
+
+
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     function vitoria() // determina vitoria ou empate
