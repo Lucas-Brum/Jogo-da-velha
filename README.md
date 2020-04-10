@@ -13,3 +13,4 @@ Dentro da paste deve dispor os arquivos:</p><br/>
 - Branco.png<br/>
 --------------xxxxxxxxxxxxx----------<br/>
 <p> Eu Hospedei a aplicação e pode ter acesso a ela atravez desta link http://jogodavelha.dx.am/ caso queira ver ela funcionando !!</p>
+<p>Agora tambem é possivel ver aqui no github https://lucas-brum.github.io/Jogo-da-velha/</p>
