@@ -305,25 +305,23 @@ function carregar ()
     //FUNÇÃO QUE MONITORA OS TURNOS DO GAME
 
     function torcaTurno(){
-        vez = vez+1
-        if (vez % 2 == 0 ){
-        window.document.getElementById('Corpo').style.backgroundColor = 'red';
-        }
-        else{
-        window.document.getElementById('Corpo').style.backgroundColor = 'blue';
-        }
+
+        vez = vez + 1
+        
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//Função responsvel pro trocar as letras do painel de nome
+//Função responsvel pro trocar as letras do painel que mosta a vez de quem joga
 
     function mostraQuemJoga(){
         if (vez % 2 == 0 ){
-            player.innerHTML = "Vez de "+p2
+            window.document.getElementById('Corpo').style.backgroundColor = 'blue'
+            player.innerHTML = "Vez de "+p1
         }
         else{
-            player.innerHTML = "Vez de "+p1
+            window.document.getElementById('Corpo').style.backgroundColor = 'red'
+            player.innerHTML = "Vez de "+p2
         }
     }
 
